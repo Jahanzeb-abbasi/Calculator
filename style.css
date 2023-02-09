@@ -97,7 +97,20 @@ body {
 }
 
 .author {
-    margin-top: 30px;
-    font-size: 1.8rem;
+    margin-top: 40px;
+    font-size: 1.6rem;
     font-family:monospace;
+    color: #241F21;
+}
+
+.author a {
+    text-decoration: none;
+}
+
+.author a:visited {
+    color: #241F21;
+}
+
+.author a:hover {
+    color: teal;
 }

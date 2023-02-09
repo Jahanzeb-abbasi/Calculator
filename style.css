@@ -100,11 +100,11 @@ body {
     margin-top: 40px;
     font-size: 1.6rem;
     font-family:monospace;
-    color: #241F21;
 }
 
 .author a {
     text-decoration: none;
+    color: #241F21;
 }
 
 .author a:visited {
@@ -113,4 +113,26 @@ body {
 
 .author a:hover {
     color: teal;
+}
+
+
+@media (max-width: 425px){
+    
+    body {
+        background-color: teal;
+    }
+
+    .author a,
+    .author a:visited{
+        font-size: 1.1rem;
+        color: rgb(166, 218, 218);
+    }
+
+    .calc {
+        width: 300px;
+    }
+
+    .btn {
+        padding-block: 20px;
+    }
 }

@@ -30,10 +30,11 @@ body {
     justify-content: space-around;
     align-items: flex-end;
     height: 90px;
-    margin-block: 30px 30px;
+    margin-block: 30px;
     border-radius: 5px;
     padding-inline: 10px;
     font-family: monospace;
+    overflow : hidden;
 }
 
 .upper-display {
@@ -79,4 +80,8 @@ body {
 .btn-style {
     color: teal;
     font-weight: 600;
+}
+
+.clicked {
+    background-color: #7c7c7c;
 }

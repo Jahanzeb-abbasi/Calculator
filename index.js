@@ -69,13 +69,21 @@ const operatorLogic = (operator) => {
     }
 }
 
-// const deletebtn = document.querySelector('.btn-delete')
-// deletebtn.addEventListener('click', deleted)
+const deletebtn = document.querySelector('.btn-delete')
+deletebtn.addEventListener('click', deleted)
 
-// function deleted() {
-//     if(lowerDisplay.textContent == hold1) hold1.slice(0,-1)
-//     if(lowerDisplay.textContent == hold2) hold2.slice(0,-1)
-// }
+function deleted() {
+    if(lowerDisplay.textContent == hold1) {
+        hold1 = hold1.slice(0,-1)
+        lowerDisplay.textContent = hold1;
+        upperDisplay.textContent = `${hold1} ${holdOperator} ${hold2}`
+    } 
+    else if(lowerDisplay.textContent == hold2) {
+        hold2 = hold2.slice(0,-1)
+        lowerDisplay.textContent = hold2;
+        upperDisplay.textContent = `${hold1} ${holdOperator} ${hold2}`
+    }
+}
 
 const clearbtn = document.querySelector('.btn-clear')
 clearbtn.addEventListener('click', () => {
@@ -91,8 +99,24 @@ const equal = document.querySelector('.btn-equal')
 let result = 0;
 equal.addEventListener('click', () => {
     result = operate(operatorLogic(holdOperator), +hold1, +hold2)
+    result = Math.round(result * 10) / 10
     lowerDisplay.textContent = result;
     hold1 = result;
     hold2 = '';
     holdOperator = '';
+
+    equal.classList.add('equal-clicked')
+        setTimeout(() => {
+            equal.classList.remove('equal-clicked')
+        },100)
+})
+
+const btnStyle = document.querySelectorAll('.btn-style')
+btnStyle.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.add('style-clicked')
+        setTimeout(() => {
+            btn.classList.remove('style-clicked')
+        },100)
+    })
 })

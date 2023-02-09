@@ -3,7 +3,7 @@ const basicOperators = {
     subtract:   (num1, num2) => num1 - num2,
     multiply:   (num1, num2) => num1 * num2,
     divide:     (num1, num2) => num1 / num2,
-    percentage: (num1) => num1 * 0.01,
+    percentage: (num1, num2) => num1 * 0.01,
 }
 
 function operate(operater, num1, num2) {

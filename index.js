@@ -69,6 +69,13 @@ const operatorLogic = (operator) => {
     }
 }
 
+const deletebtn = document.querySelector('.btn-delete')
+deletebtn.addEventListener('click', deleted)
+
+function deleted() {
+    if(lowerDisplay.textContent == hold1) hold1.slice(0,-1)
+    if(lowerDisplay.textContent == hold2) hold2.slice(0,-1)
+}
 
 
 const equal = document.querySelector('.btn-equal')
